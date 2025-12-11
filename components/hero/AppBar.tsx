@@ -4,17 +4,14 @@ import React, { useState } from "react";
 function AppBar() {
   const [openBar, setOpenBar] = useState(false);
 
-  console.log(openBar);
-
   return (
-    <div className="lg:hidden w-full h-[80px] flex items-center relative z-10">
+    <div className="lg:hidden w-full h-20 flex items-center relative z-[50]">
       <span
         onClick={() => setOpenBar(!openBar)}
         className="ml-3 rounded-lg p-2 flex items-center justify-center"
       >
         {openBar ? (
           <svg
-          
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
@@ -47,17 +44,18 @@ function AppBar() {
       </span>
 
       <div
-        className={`w-full h-[calc(100vh-80px)] 
-      backdrop-blur-lg bg-white/10 
-      absolute top-[80px] z-20 
-      transition-all duration-500 
-      ${openBar ? "left-0" : "-left-full"}`}
+        className={`fixed left-0 top-20 w-full h-[calc(100vh-80px)] 
+  backdrop-blur-xl bg-white/30  
+  shadow-xl border-t border-white/20 
+  z-[99999] transition-transform duration-500 
+  flex flex-col justify-between
+  ${openBar ? "translate-x-0" : "-translate-x-full"}`}
       >
-        <ul className="w-full flex flex-col mt-6 space-y-5 px-6">
+        <ul className="w-full flex flex-col mt-6 space-y-6 px-6">
           <a
             onClick={() => setOpenBar(false)}
             href="#about"
-            className="text-black text-xl font-medium cursor-pointer"
+            className="text-black text-2xl font-semibold cursor-pointer hover:text-[#5700EF] transition"
           >
             About
           </a>
@@ -65,7 +63,7 @@ function AppBar() {
           <a
             onClick={() => setOpenBar(false)}
             href="#projects"
-            className="text-black text-xl font-medium cursor-pointer"
+            className="text-black text-2xl font-semibold cursor-pointer hover:text-[#5700EF] transition"
           >
             Projects
           </a>
@@ -73,7 +71,7 @@ function AppBar() {
           <a
             onClick={() => setOpenBar(false)}
             href="#articles"
-            className="text-black text-xl font-medium cursor-pointer"
+            className="text-black text-2xl font-semibold cursor-pointer hover:text-[#5700EF] transition"
           >
             Articles
           </a>
@@ -81,7 +79,7 @@ function AppBar() {
           <a
             onClick={() => setOpenBar(false)}
             href="#contribute"
-            className="text-black text-xl font-medium cursor-pointer"
+            className="text-black text-2xl font-semibold cursor-pointer hover:text-[#5700EF] transition"
           >
             Contribute
           </a>
@@ -89,14 +87,14 @@ function AppBar() {
           <a
             onClick={() => setOpenBar(false)}
             href="#contact"
-            className="text-black text-xl font-medium cursor-pointer"
+            className="text-black text-2xl font-semibold cursor-pointer hover:text-[#5700EF] transition"
           >
             Contact
           </a>
         </ul>
 
-        <div className="w-full px-6 mt-10">
-          <button className="w-full bg-[#5700EF] text-white py-3 rounded-lg flex items-center justify-center gap-2 text-lg font-medium cursor-pointer">
+        <div className="w-full px-6 mb-8">
+          <button className="w-full bg-[#5700EF] text-white py-3 rounded-xl flex items-center justify-center gap-2 text-lg font-semibold cursor-pointer hover:bg-[#4500c5] transition shadow-lg">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
