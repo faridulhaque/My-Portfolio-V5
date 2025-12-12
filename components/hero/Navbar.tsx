@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Navbar() {
   return (
-    <nav className="hidden lg:flex py-4 items-center justify-between relative z-10 w-11/12 mx-auto">
+    <nav className="hidden lg:flex py-4 items-center justify-between relative z-10 w-10/12 mx-auto">
       <Image src="/assets/name-logo.png" alt="logo" width={200} height={80} />
 
       <ul className="flex gap-10 text-lg text-black">

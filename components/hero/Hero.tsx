@@ -1,8 +1,23 @@
 import React from "react";
 import Navbar from "./Navbar";
 import AppBar from "./AppBar";
+import Image from "next/image";
 
 function Hero() {
+  const items = [
+    "html5",
+    "css3",
+    "tailwindcss",
+    "javascript",
+    "typescript",
+    "react",
+    "nextjs",
+    "nodejs",
+    "express",
+    "nestjs",
+    "prisma",
+    "mongodb"
+  ];
   return (
     <div className="relative w-full h-screen bg-linear-to-t from-[#C7A9FF] to-[#F5EFFF] overflow-hidden">
       <div className="absolute top-0 left-1/2 w-full h-[150%] -translate-x-1/2 z-10 bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,1)_0%,rgba(255,255,255,0.6)_30%,rgba(255,255,255,0)_70%)]"></div>
@@ -10,7 +25,7 @@ function Hero() {
       <Navbar />
       <AppBar />
 
-      <div className="w-11/12 md:w-9/12 h-fit py-10 mx-auto right-0 left-0 top-[18%] absolute z-10">
+      <div className="w-10/12 md:w-9/12 h-fit py-10 mx-auto right-0 left-0 top-[18%] absolute z-10">
         <div className="w-full relative">
           <h2 className="text-4xl md:text-6xl lg:text-8xl text-black font-extrabold text-center leading-tight relative inline-block mx-auto">
             <span className="absolute -left-6 md:-left-10 top-1/2 -translate-y-1/2 rotate-45 bg-[#FEF3B5] text-[#010101] py-1 px-3 md:px-4 rounded-2xl text-[9px] md:text-xs font-semibold constant-tilt-shake">
@@ -70,14 +85,12 @@ function Hero() {
         </div>
       </div>
 
-      <div className="w-10/12 h-40 absolute bottom-0 flex justify-between mx-auto left-0 right-0">
-        <div>
-          <span className="text-xl font-semibold text-[#0F0F0F]">
-            3+ years Experience
-          </span>
+      <div className="w-10/12 h-10 absolute bottom-40 flex justify-between mx-auto left-0 right-0 ">
+        <div className="text-xl font-semibold text-[#0F0F0F]">
+          3+ years Experience
         </div>
 
-        <div className="flex justify-end relative z-20">
+        <div className="flex justify-end relative z-20 mt-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -104,6 +117,25 @@ function Hero() {
           >
             <path d="M2 4.5h3l4.7 10.3L14 4.5h3l-1.6 3.9L21 19.5h-3l-3.6-8.4-3.7 8.4H8L2 4.5z" />
           </svg>
+        </div>
+      </div>
+      
+      <div className="absolute overflow-hidden h-30 bg-white bottom-0">
+        <div className="flex animate-slide whitespace-nowrap mt-5">
+          {[...items, ...items].map((i, idx) => (
+            <div key={idx} className="flex flex-col items-center gap-2 mx-10">
+              <Image
+                width={80}
+                height={40}
+                src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${i}/${i}-original.svg`}
+                alt={i}
+                className="w-12 h-12 cursor-pointer"
+              />
+              <span className="text-sm">
+                {i.charAt(0).toUpperCase() + i.slice(1)}
+              </span>
+            </div>
+          ))}
         </div>
       </div>
     </div>

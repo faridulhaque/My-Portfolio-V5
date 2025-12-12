@@ -5,7 +5,7 @@ function AppBar() {
   const [openBar, setOpenBar] = useState(false);
 
   return (
-    <div className="lg:hidden w-full h-20 flex items-center relative z-[50]">
+    <div className="lg:hidden w-full h-20 flex items-center relative z-50">
       <span
         onClick={() => setOpenBar(!openBar)}
         className="ml-3 rounded-lg p-2 flex items-center justify-center"
@@ -47,7 +47,7 @@ function AppBar() {
         className={`fixed left-0 top-20 w-full h-[calc(100vh-80px)] 
   backdrop-blur-xl bg-white/30  
   shadow-xl border-t border-white/20 
-  z-[99999] transition-transform duration-500 
+  z-99999 transition-transform duration-500 
   flex flex-col justify-between
   ${openBar ? "translate-x-0" : "-translate-x-full"}`}
       >

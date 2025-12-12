@@ -21,3 +21,36 @@
     transform: rotate(0deg);
   }
 }
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+/* track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* thumb */
+::-webkit-scrollbar-thumb {
+  background: #c5c5c5;
+  border-radius: 9999px;
+}
+
+/* thumb hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-slide {
+  animation: slide 45s linear infinite;
+}
