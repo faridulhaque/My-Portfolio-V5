@@ -5,28 +5,34 @@ import React from "react";
 function Articles() {
   const articles = [
     {
-      title: "Inventory Management System",
+      title: "Mystery of useEffect in React: Why We Use It",
       description:
-        "A full-stack inventory and sales management platform with admin dashboard, reports, and authentication.",
-      imgUrl: "/assets/project/inventory.webp",
-      url: "",
+        "A few days ago, I read a LinkedIn post where a recruiter was complaining that, in an interview for web developer interns, when he asked about...",
+      imgUrl: "/assets/article/use-effect.webp",
+      url: "https://medium.com/@faridmurshed11/mystery-of-useeffect-in-react-why-we-use-itmystery-of-useeffect-in-react-why-we-use-it-d1ca28977ce9",
+      date: "Nov 12, 2025",
     },
     {
-      title: "Inventory Management System 2",
+      title: "The Real Lessons I Learned Building Projects",
       description:
-        "A full-stack inventory and sales management platform with admin dashboard, reports, and authentication.",
-      imgUrl: "/assets/project/inventory.webp",
-      url: "",
+        "I have been working as a Fullstack developer for years. I started as a Frontend developer — if saying explicitly, a React Developer — then...",
+      imgUrl: "/assets/article/lessons.webp",
+      url: "https://medium.com/@faridmurshed11/from-react-to-nestjs-the-real-lessons-i-learned-building-projects-c3fe91df0a6d",
+      date: "Dec 3, 2025",
     },
   ];
   return (
-    <div className="w-10/12 mx-auto py-20">
+    <div id="articles" className="w-10/12 mx-auto py-20">
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 h-auto md:h-20">
         <h2 className="w-full md:w-auto overflow-hidden text-4xl md:text-5xl lg:text-6xl text-[#08080C] font-semibold leading-tight">
           Latest Articles
         </h2>
 
-        <button className="self-start md:self-center border border-[#0F0F0F] cursor-pointer flex items-center gap-2 bg-white px-4 py-2 rounded-md text-[#0f0f0f]">
+        <Link
+          target="_blank"
+          href="https://medium.com/@faridmurshed11"
+          className="self-start md:self-center border border-[#0F0F0F] cursor-pointer flex items-center gap-2 bg-white px-4 py-2 rounded-md text-[#0f0f0f]"
+        >
           View More
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -42,16 +48,13 @@ function Articles() {
               d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
             />
           </svg>
-        </button>
+        </Link>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-20 gap-y-10 py-20 ">
         {articles?.map((a) => (
-          <div
-            className="w-full h-[500px] overflow-hidden relative"
-            key={a.title}
-          >
-            <div className="relative h-3/5 w-full rounded-xl overflow-hidden">
+          <div className="w-full h-fit overflow-hidden relative" key={a.title}>
+            <div className="relative h-80 w-full rounded-xl overflow-hidden">
               <Image
                 src={a.imgUrl}
                 alt={a.title}
@@ -60,14 +63,15 @@ function Articles() {
               />
             </div>
             <span className="text-sm text-black/70 py-3 inline-block">
-              Dec 3, 2025
+              {a.date}
             </span>
 
             <h2 className="text-2xl text-black font-semibold">{a.title}</h2>
-            <p className="text-md text-black/90 py-2">{a.description}</p>
+            <p className="text-md text-black/90 py-2">{a.description.slice(0, 100)} ...</p>
             <Link
               href={a.url}
-              className="flex items-center btn btn-white px-4 py-2 shadow-md border border-black/70 rounded-4xl bottom-0 absolute text-sm"
+              target="_blank"
+              className="inline-flex items-center justify-center gap-2 btn btn-white px-4 shadow-md border border-black/70 rounded-4xl py-1 text-sm mt-5 w-fit"
             >
               Read More
               <svg

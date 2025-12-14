@@ -1,8 +1,18 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 function AppBar() {
   const [openBar, setOpenBar] = useState(false);
+  const navItems = ["about", "projects", "contribution", "articles", "contact"];
+
+  useEffect(() => {
+    if (!openBar) {
+      // setModalInfo(null)
+      document.body.style.overflowY = "scroll";
+    } else {
+      document.body.style.overflowY = "hidden";
+    }
+  }, [openBar]);
 
   return (
     <div className="lg:hidden w-full h-20 flex items-center relative z-50">
@@ -52,45 +62,16 @@ function AppBar() {
   ${openBar ? "translate-x-0" : "-translate-x-full"}`}
       >
         <ul className="w-full flex flex-col mt-6 space-y-6 px-6">
-          <a
-            onClick={() => setOpenBar(false)}
-            href="#about"
-            className="text-black text-2xl font-semibold cursor-pointer hover:text-[#5700EF] transition"
-          >
-            About
-          </a>
-
-          <a
-            onClick={() => setOpenBar(false)}
-            href="#projects"
-            className="text-black text-2xl font-semibold cursor-pointer hover:text-[#5700EF] transition"
-          >
-            Projects
-          </a>
-
-          <a
-            onClick={() => setOpenBar(false)}
-            href="#articles"
-            className="text-black text-2xl font-semibold cursor-pointer hover:text-[#5700EF] transition"
-          >
-            Articles
-          </a>
-
-          <a
-            onClick={() => setOpenBar(false)}
-            href="#contribute"
-            className="text-black text-2xl font-semibold cursor-pointer hover:text-[#5700EF] transition"
-          >
-            Contribute
-          </a>
-
-          <a
-            onClick={() => setOpenBar(false)}
-            href="#contact"
-            className="text-black text-2xl font-semibold cursor-pointer hover:text-[#5700EF] transition"
-          >
-            Contact
-          </a>
+          {navItems?.map((n) => (
+            <a
+              key={n}
+              onClick={() => setOpenBar(false)}
+              href={`#${n}`}
+              className="text-black text-2xl font-semibold cursor-pointer hover:text-[#5700EF] transition"
+            >
+              {n}
+            </a>
+          ))}
         </ul>
 
         <div className="w-full px-6 mb-8">

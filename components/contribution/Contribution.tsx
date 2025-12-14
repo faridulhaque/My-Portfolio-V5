@@ -4,23 +4,23 @@ import React from "react";
 function Contribution() {
   const resources = [
     {
-      url: "https://example.com/project-alpha",
-      title: "Project Alpha",
+      url: "https://nurui.vercel.app/",
+      title: "Nur/ui",
       description:
-        "A lightweight web app for managing daily tasks with a clean UI.",
-      tags: ["productivity", "web", "react"],
+        "Contributed UI and UX improvements to the project.",
+      tags: ["UI", "animation", "css"],
     },
     {
-      url: "https://example.com/api-docs",
-      title: "Public API Docs",
+      url: "https://zenui.net/",
+      title: "ZenUI Library",
       description:
-        "REST API documentation with examples and authentication guides.",
-      tags: ["api", "backend", "documentation"],
+        "Added a new animated feature to the library.",
+      tags: ["TypeScript", "React", "Tailwind"],
     },
   ];
 
   return (
-    <div className="bg-[#F8F5FE] py-10">
+    <div id="contribution" className="bg-[#F8F5FE] py-10">
       <div className="w-10/12 mx-auto">
         <h2 className="text-4xl md:text-5xl lg:text-6xl text-center text-black font-semibold">
           Open Source Contribution
@@ -45,7 +45,9 @@ function Contribution() {
                   <h3 className="text-white font-semibold text-3xl">
                     {r.title}
                   </h3>
-                  <Link className="cursor-pointer relative z-10" href={r.url}>
+                  <Link
+                  target="_blank"
+                  className="cursor-pointer relative z-10" href={r.url}>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="size-6 text-white cursor-pointer"
@@ -71,6 +73,7 @@ function Contribution() {
                 </div>
 
                 <Link
+                target="_blank"
                   href={r.url}
                   className="absolute z-10 bottom-0 py-3 w-full rounded-md shadow-md text-white bg-white/60 cursor-pointer flex items-center justify-center"
                 >

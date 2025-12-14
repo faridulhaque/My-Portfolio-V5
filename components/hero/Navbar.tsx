@@ -1,37 +1,24 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Navbar() {
+  const navItems = ["about", "projects", "contribution", "articles", "contact"];
+
   return (
     <nav className="hidden lg:flex py-4 items-center justify-between relative z-10 w-10/12 mx-auto">
       <Image src="/assets/name-logo.png" alt="logo" width={200} height={80} />
 
       <ul className="flex gap-10 text-lg text-black">
-        <li>
-          <a className="cursor-pointer hover:text-[#5700EF]" href="#about">
-            About
-          </a>
-        </li>
-        <li>
-          <a className="cursor-pointer hover:text-[#5700EF]" href="#projects">
-            Projects
-          </a>
-        </li>
-        <li>
-          <a className="cursor-pointer hover:text-[#5700EF]" href="#contribute">
-            Contribute
-          </a>
-        </li>
-        <li>
-          <a className="cursor-pointer hover:text-[#5700EF]" href="#articles">
-            Articles
-          </a>
-        </li>
-
-        <li>
-          <a className="cursor-pointer hover:text-[#5700EF]" href="#contact">
-            Contact
-          </a>
-        </li>
+        {navItems.map((n) => (
+          <li key={n}>
+            <Link
+              className="cursor-pointer hover:text-[#5700EF] capitalize"
+              href={`#${n}`}
+            >
+              {n}
+            </Link>
+          </li>
+        ))}
       </ul>
 
       <button className="cursor-pointer flex items-center gap-2 bg-[#5700EF] px-4 py-2 rounded-md text-white">

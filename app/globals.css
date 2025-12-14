@@ -1,5 +1,7 @@
 @import "tailwindcss";
-
+* {
+  scroll-behavior: smooth !important;
+}
 .constant-tilt-shake {
   animation: tilt-shaking 0.3s infinite;
 }

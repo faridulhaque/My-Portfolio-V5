@@ -4,25 +4,25 @@ import React from "react";
 function Experience() {
   const experienceData = [
     {
-      period: "Jan 2021 – Feb 2022",
+      period: "October 2022 – January 2023",
       role: "Frontend Developer",
       company: "AIDE Business solution",
       details:
-        "Developed and maintained 8+ full-stack projects using Next.js, NestJS, and PostgreSQL. Implemented complex API logic, optimized database queries, and integrated authentication flows. Led the migration of two major apps from REST to a modular service-based structure.",
+        "Started as an intern and was promoted to Junior Frontend Developer within a month. Worked on an e-commerce platform and a government task management system, gaining hands-on experience in teamwork, TypeScript, and raw CSS.",
     },
     {
-      period: "Jan 2022 – Apr 2023",
+      period: "March 2023 – May 2023",
       role: "Frontend Developer",
-      company: "AIDE Business solution",
+      company: "Nujum IT",
       details:
-        "Developed and maintained multiple products with improved UI/UX, built dashboards, automated internal tools, and enhanced system performance across several services.",
+        "Worked on multiple small frontend-focused projects, strengthening my CSS skills by implementing pixel-perfect designs.",
     },
     {
-      period: "Apr 2023 – Present",
-      role: "Full-Stack Developer",
-      company: "AIDE Business solution",
+      period: "Dec 2023 – Dec 2025",
+      role: "Frontend Engineer",
+      company: "Revelin7",
       details:
-        "Building scalable web apps using Next.js, NestJS, PostgreSQL, Prisma, and microservice-oriented architecture. Improved deployment workflows, CI/CD, caching, and performance tuning across multiple systems.",
+        "Started as a Frontend Engineer and later transitioned into backend development, working across multiple projects on both frontend and backend. Through hands-on work, gained experience with NestJS, TypeORM, testing, performance optimization, and effective teamwork.",
     },
   ];
 
@@ -37,7 +37,7 @@ function Experience() {
         My Experience
       </h2>
 
-      <p className="text-center text-sm md:text-md lg:text-lg text-white/50 w-11/12 lg:w-3/5 py-3 mx-auto">
+      <p className="text-center text-md text-white/80 w-11/12 lg:w-3/5 py-3 mx-auto">
         I have worked on multiple full-stack projects over the last three years
         across three different companies, including a solid two-year role in my
         most recent position.
