@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import ContactForm from "./ContactForm";
 
 export default function Footer() {
   const navItems = ["about", "projects", "contribution", "articles", "contact"];
@@ -78,31 +79,7 @@ export default function Footer() {
             ))}
           </ul> */}
 
-          <form className="w-full py-10 px-6 md:px-10 bg-black/50 rounded-md mt-6 h-fit">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 text-xs">
-              <input
-                className="outline-none rounded-2xl h-10 bg-[#333333] p-3 text-white"
-                type="text"
-                placeholder="Name"
-              />
-              <input
-                className="outline-none rounded-2xl h-10 bg-[#333333] p-3 text-white"
-                type="text"
-                placeholder="Email"
-              />
-              <textarea
-                className="md:col-span-2 outline-none rounded-2xl h-24 bg-[#333333] p-3 text-white resize-none"
-                placeholder="Your Text"
-              />
-            </div>
-
-            <button
-              type="submit"
-              className="text-white/70 bg-[#5700EF] rounded-2xl w-full h-9 mt-5"
-            >
-              Send
-            </button>
-          </form>
+        <ContactForm></ContactForm>
 
           {/* <ul className="flex lg:hidden justify-between text-sm text-white/80 w-full mt-16">
             {navItems.map((n) => (
