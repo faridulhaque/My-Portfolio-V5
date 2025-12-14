@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(255,167,167,0.6),transparent_60%)]" />
       </div>
 
-      <div className="pb-10 w-11/12 md:w-10/12 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 relative z-10 mt-20 border-b border-white/50">
+      <div className="pb-10 w-11/12 md:w-10/12 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 relative z-10 mt-5 md:mt-16 lg:mt-20 border-b border-white/50">
         <div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl text-white font-bold">
             Let&apos;s connect
