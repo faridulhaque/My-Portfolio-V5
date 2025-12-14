@@ -50,7 +50,7 @@ function Experience() {
             className="w-full flex flex-col lg:flex-row lg:items-start lg:justify-between relative space-y-4 lg:space-y-0"
           >
             <div className="h-full w-px bg-white/70 absolute left-0 top-0 ">
-              <div className="z-10 absolute top-6 md:top-7 lg:top-8 text-white w-2 h-2 bg-orange-400 rounded-full -left-[3px]"></div>
+              <div className="z-10 absolute top-6 md:top-7 lg:top-8 text-white w-2 h-2 bg-orange-400 rounded-full -left-[3.5px]"></div>
             </div>
 
 
