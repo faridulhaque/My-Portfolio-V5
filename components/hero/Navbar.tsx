@@ -6,9 +6,9 @@ export default function Navbar() {
 
   return (
     <nav className="hidden lg:flex py-4 items-center justify-between relative z-10 w-10/12 mx-auto">
-      <Image src="/assets/name-logo.png" alt="logo" width={200} height={80} />
+      <Image src="/assets/name-logo.png" alt="logo" width={175} height={60} />
 
-      <ul className="flex gap-10 text-lg text-black">
+      <ul className="flex gap-10 text-md text-black">
         {navItems.map((n) => (
           <li key={n}>
             <Link
@@ -21,7 +21,7 @@ export default function Navbar() {
         ))}
       </ul>
 
-      <button className="cursor-pointer flex items-center gap-2 bg-[#5700EF] px-4 py-2 rounded-md text-white">
+      <button className="cursor-pointer flex items-center gap-1 bg-[#5700EF] px-2 py-2 rounded-md text-white">
         Download Resume
         <svg
           xmlns="http://www.w3.org/2000/svg"

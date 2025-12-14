@@ -6,16 +6,16 @@ function About() {
     <div>
       <div id="about" className="h-10 w-full"></div>
 
-      <div className="w-10/12 mx-auto py-20">
+      <div className="w-11/12 md:w-4/5 mx-auto py-0 md:py-10 lg:py-15">
         <span className="py-3 text-md text-[#0F0F0F]">(About Me)</span>
 
-        <h2 className="w-full md:w-4/5 lg:w-1/2 overflow-hidden text-4xl md:text-5xl lg:text-6xl text-[#08080C] font-semibold leading-tight">
+        <h2 className="w-full md:w-4/5 lg:w-1/2 overflow-hidden text-4xl md:text-5xl lg:text-6xl text-[#08080C] font-semibold md:leading-tight">
           About Faridul Haque Murshed
         </h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-5 md:mt-10">
           <div>
-            <p className="py-6 leading-7 text-[15px] md:text-base text-[#0F0F0F]">
+            <p className="py-2 md:py-6 leading-7 text-[15px] md:text-base text-[#0F0F0F]">
               I’m Faridul Haque Murshed, a full-stack developer specializing in
               Next.js, NestJS, TypeScript, and modern backend tooling. I enjoy
               building fast, clean, and user-focused web applications that solve
@@ -51,7 +51,7 @@ function About() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-3 gap-0 md:gap-4 w-full items-start">
+          <div className="grid grid-cols-3 gap-0 md:gap-4 w-full items-start  pb-3 sm:pb-0">
             <div className="inline-flex flex-col items-center justify-center border-r border-black/40 py-3">
               <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-black">
                 3+
