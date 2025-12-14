@@ -6,22 +6,20 @@ function Contribution() {
     {
       url: "https://nurui.vercel.app/",
       title: "Nur/ui",
-      description:
-        "Contributed UI and UX improvements to the project.",
+      description: "Contributed UI and UX improvements to the project.",
       tags: ["UI", "animation", "css"],
     },
     {
       url: "https://zenui.net/",
       title: "ZenUI Library",
-      description:
-        "Added a new animated feature to the library.",
+      description: "Added a new animated feature to the library.",
       tags: ["TypeScript", "React", "Tailwind"],
     },
   ];
 
   return (
     <div id="contribution" className="bg-[#F8F5FE] py-10">
-      <div className="w-10/12 mx-auto">
+      <div className="w-11/12 md:w-10/12 mx-auto">
         <h2 className="text-4xl md:text-5xl lg:text-6xl text-center text-black font-semibold">
           Open Source Contribution
         </h2>
@@ -31,23 +29,25 @@ function Contribution() {
           small improvements and learning through real-world codebases.
         </p>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-20 gap-y-10 py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-20 gap-y-10 py-5 md:py-15 lg:py-20">
           {resources?.map((r) => (
             <div
-              className="relative w-full h-96 overflow-hidden bg-black rounded-xl flex items-center justify-center"
+              className="relative w-full h-64 pb-1 md:pb-0 md:h-96 overflow-hidden bg-black rounded-xl flex items-center justify-center"
               key={r.url}
             >
               <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(255,167,167,0.6),transparent_60%)]" />
               <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(153,136,255,0.6),transparent_60%)]" />
 
-              <div className="h-4/5 w-4/5 relative">
+              <div className="h-11/12 w-11/12 md:h-4/5 md:w-4/5 relative">
                 <div className="flex justify-between w-full h-12 items-center">
                   <h3 className="text-white font-semibold text-3xl">
                     {r.title}
                   </h3>
                   <Link
-                  target="_blank"
-                  className="cursor-pointer relative z-10" href={r.url}>
+                    target="_blank"
+                    className="cursor-pointer relative z-10"
+                    href={r.url}
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="size-6 text-white cursor-pointer"
@@ -73,9 +73,9 @@ function Contribution() {
                 </div>
 
                 <Link
-                target="_blank"
+                  target="_blank"
                   href={r.url}
-                  className="absolute z-10 bottom-0 py-3 w-full rounded-md shadow-md text-white bg-white/60 cursor-pointer flex items-center justify-center"
+                  className="absolute z-10 bottom-0 py-1 md:py-3 w-full rounded-md shadow-md text-white bg-white/60 cursor-pointer flex items-center justify-center"
                 >
                   View On Github
                   <svg
