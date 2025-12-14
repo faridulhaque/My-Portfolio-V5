@@ -95,7 +95,7 @@ export default function Footer() {
 
       <div className="h-auto md:h-16 flex flex-col md:flex-row items-center justify-between w-11/12 md:w-10/12 mx-auto py-4 gap-4">
         <div className="text-white/80 text-xs text-center md:text-left">
-          © Faridul Haque Murshed 2023. All rights reserved.
+          © Faridul Haque Murshed {new Date().getFullYear()}. All rights reserved.
         </div>
 
         <div className="flex items-center justify-center md:justify-end h-full relative z-20">
