@@ -20,15 +20,15 @@ function Hero() {
     "mongodb",
   ];
   return (
-    <div className="relative w-full h-screen bg-linear-to-t from-[#C7A9FF] to-[#F5EFFF] overflow-hidden">
+    <div className="relative w-full min-h-screen bg-linear-to-t from-[#C7A9FF] to-[#F5EFFF] overflow-hidden pb-32">
       <div className="absolute top-0 left-1/2 w-full h-[150%] -translate-x-1/2 z-10 bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,1)_0%,rgba(255,255,255,0.6)_30%,rgba(255,255,255,0)_70%)]"></div>
 
       <Navbar />
       <AppBar />
 
       <div className="w-11/12 md:w-9/12 h-fit py-10 mx-auto relative z-10">
-        <div className="w-full relative">
-          <h2 className="text-4xl md:text-6xl lg:text-8xl text-black font-extrabold text-center relative">
+        <div className="w-full md:mt-20">
+          <h2 className=" text-4xl md:text-6xl lg:text-8xl text-black font-extrabold text-center relative">
             <span className="absolute -left-6 md:-left-10 top-1/2 -translate-y-1/2 rotate-45 bg-[#FEF3B5] text-[#010101] py-1 px-3 md:px-4 rounded-2xl text-[9px] md:text-xs font-semibold constant-tilt-shake">
               Frontend
             </span>
@@ -95,12 +95,12 @@ function Hero() {
         </div>
       </div>
 
-      <div className="w-10/12 h-10 absolute bottom-40 flex justify-center md:justify-between mx-auto left-0 right-0 ">
-        <div className="text-xl font-semibold text-[#0F0F0F] hidden md:block ">
+      <div className="w-10/12 h-20 flex justify-center md:justify-between mx-auto ">
+        <div className="text-xl font-semibold text-[#0F0F0F] hidden md:flex items-center">
           3+ years Experience
         </div>
 
-        <div className="flex justify-center items-center md:justify-end relative z-20 mt-10 md:mt-0 space-x-10">
+        <div className="flex justify-center items-center md:justify-end relative z-20 space-x-10">
           <Link
             target="_blank"
             href="https://www.linkedin.com/in/faridulhaquemurshed/"
@@ -140,7 +140,7 @@ function Hero() {
         </div>
       </div>
 
-      <div className="absolute overflow-hidden h-30 bg-white bottom-0">
+      <div className="absolute overflow-hidden h-32 left-0 bg-white bottom-0">
         <div className="flex animate-slide whitespace-nowrap mt-5">
           {[...items, ...items].map((i, idx) => (
             <div key={idx} className="flex flex-col items-center gap-2 mx-10">

@@ -75,7 +75,7 @@ function AppBar() {
         </ul>
 
         <div className="w-full px-6 mb-8">
-          <button className="w-full bg-[#5700EF] text-white py-3 rounded-xl flex items-center justify-center gap-2 text-lg font-semibold cursor-pointer hover:bg-[#4500c5] transition shadow-lg">
+          <button className="w-full bg-[#5700EF] text-white py-3 rounded-xl flex items-center justify-center gap-2 text-lg font-semibold cursor-pointer hover:bg-[#4500c5] transition shadow-lg mb-20">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
