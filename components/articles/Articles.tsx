@@ -22,7 +22,7 @@ function Articles() {
     },
   ];
   return (
-    <div id="articles" className="w-10/12 mx-auto py-20">
+    <div id="articles" className="w-11/12 md:w-10/12 mx-auto py-5 md:py-16 lg:py-20">
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 h-auto md:h-20">
         <h2 className="w-full md:w-auto overflow-hidden text-4xl md:text-5xl lg:text-6xl text-[#08080C] font-semibold leading-tight">
           Latest Articles
@@ -51,10 +51,10 @@ function Articles() {
         </Link>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-20 gap-y-10 py-20 ">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-20 gap-y-10 py-5 md:py-16 lg:py-20 ">
         {articles?.map((a) => (
           <div className="w-full h-fit overflow-hidden relative" key={a.title}>
-            <div className="relative h-80 w-full rounded-xl overflow-hidden">
+            <div className="relative h-64 md:h-80 w-full rounded-xl overflow-hidden">
               <Image
                 src={a.imgUrl}
                 alt={a.title}
