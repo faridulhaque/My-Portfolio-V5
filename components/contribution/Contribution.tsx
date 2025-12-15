@@ -77,7 +77,7 @@ function Contribution() {
                   href={r.url}
                   className="absolute z-10 bottom-0 py-1 md:py-3 w-full rounded-md shadow-md text-white bg-white/60 cursor-pointer flex items-center justify-center"
                 >
-                  View On Github
+                  View on Github
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="size-6 text-white cursor-pointer ml-2"
