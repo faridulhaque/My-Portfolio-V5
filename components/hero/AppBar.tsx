@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 function AppBar() {
@@ -75,7 +76,11 @@ function AppBar() {
         </ul>
 
         <div className="w-full px-6 mb-8">
-          <button className="w-full bg-[#5700EF] text-white py-3 rounded-xl flex items-center justify-center gap-2 text-lg font-semibold cursor-pointer hover:bg-[#4500c5] transition shadow-lg mb-20">
+          <Link
+            href="resume.pdf"
+            download
+            className="w-full bg-[#5700EF] text-white py-3 rounded-xl flex items-center justify-center gap-2 text-lg font-semibold cursor-pointer hover:bg-[#4500c5] transition shadow-lg mb-20"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -91,7 +96,7 @@ function AppBar() {
               />
             </svg>
             Download Resume
-          </button>
+          </Link>
         </div>
       </div>
     </div>
