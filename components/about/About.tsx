@@ -79,7 +79,7 @@ function About() {
                 9+
               </h2>
               <span className="text-sm md:text-base text-black/60 text-center mt-1">
-                Real
+                Real-world
                 <br />
                 Projects
               </span>
