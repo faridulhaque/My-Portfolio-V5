@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Farid Murshed",
+  title: "Faridul Haque Murshed",
   description: "A passionate fullstack web developer",
 };
 
