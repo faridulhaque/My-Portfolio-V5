@@ -9,34 +9,37 @@ function Projects() {
       gitClient: "",
       gitServer: "",
       videoDemo: "",
-      live: "https://play.google.com/store/apps/details?id=com.app.windowseat",
+      live: "",
       title: "Window Seat",
       description:
-        "An Android and iOS app that helps travelers find local guides, where I built most of the backend as part of the team.",
+        "A mobile application connecting travelers with local guides, where I led and built most of the backend system.",
       imgUrl: "/assets/project/window-seat.webp",
-      tag: ["NestJS", "TypeORM", "RazorPay"],
-    },
-    {
-      gitClient: "https://github.com/faridulhaque/The-Coffee",
-      gitServer: "",
-      videoDemo: "",
-      live: "https://the-coffee-three.vercel.app/",
-      title: "The Coffee",
-      description:
-        "A frontend-only coffee shop project built with raw CSS, featuring smooth animations and a visually appealing design.",
-      imgUrl: "/assets/project/coffee.webp",
-      tag: ["Next.js", "TypeScript", "CSS"],
-    },
-    {
-      gitClient: "https://github.com/faridulhaque/Taskflow-FE",
-      gitServer: "https://github.com/faridulhaque/Taskflow-BE",
-      videoDemo: "",
-      live: "https://taskflow-fe-five.vercel.app/",
-      title: "Task Flow",
-      description:
-        "A full-stack project featuring complete CRUD operations built with Next.js and NestJS.",
-      imgUrl: "/assets/project/todo.webp",
-      tag: ["Next.js", "Tailwind", "ExpressJs", "MongoDB"],
+      tag: ["NestJS", "PostgreSQL", "TypeORM", "JWT", "Razorpay"],
+
+      role: "Backend Developer (90% ownership)",
+
+      status:
+        "Previously live on Google Play Store for 3 months (early-stage production). Later unpublished due to business closure.",
+
+      overview:
+        "Designed and developed the core backend system powering a travel app that allowed users to search and directly connect with local guides.",
+
+      responsibilities: [
+        "Designed complete database schema using PostgreSQL",
+        "Architected backend structure using NestJS",
+        "Built RESTful APIs for user registration and authentication (JWT)",
+        "Implemented guide search and profile management APIs",
+        "Developed direct contact communication endpoints",
+        "Integrated Razorpay payment gateway",
+        "Handled validation, security, and API optimization",
+      ],
+
+      impact: [
+        "Supported early-stage production users (~100 users)",
+        "Built scalable backend foundation for mobile app launch",
+      ],
+
+      duration: "3 months (Production phase)",
     },
     {
       gitClient: "https://github.com/faridulhaque/Heaven-Chat-FE",
@@ -45,9 +48,126 @@ function Projects() {
       live: "https://heaven-chat-fe.vercel.app/",
       title: "Heaven Chat",
       description:
-        "A real-time communication app featuring peer-to-peer chat, calling, and AI integration, built with Next.js, NestJS, and Socket.IO.",
+        "A real-time messaging and WebRTC calling application with online presence tracking and AI assistant integration.",
       imgUrl: "/assets/project/chat.webp",
-      tag: ["Next.js", "Tailwind", "NestJs", "Socket.io"],
+      tag: [
+        "Next.js",
+        "NestJS",
+        "PostgreSQL",
+        "Socket.IO",
+        "WebRTC",
+        "TypeORM",
+        "AI",
+      ],
+
+      role: "Full-Stack Developer (Solo Project)",
+
+      status: "Live",
+
+      overview:
+        "A real-time communication platform built from scratch featuring WebSocket-based messaging, WebRTC peer-to-peer calling, presence tracking, and AI-powered assistance.",
+
+      responsibilities: [
+        "Designed PostgreSQL database schema using TypeORM",
+        "Architected backend using NestJS with WebSocket gateways",
+        "Implemented real-time messaging using Socket.IO",
+        "Built peer-to-peer audio calling using WebRTC signaling via Socket.IO",
+        "Developed online presence tracking system",
+        "Integrated Google OAuth authentication",
+        "Integrated AI assistant using OpenRouter API",
+        "Built responsive frontend with Next.js and Tailwind CSS",
+        "Deployed backend on Railway (planning migration to Render) and frontend on Vercel",
+      ],
+
+      challenges: [
+        "Managing WebRTC signaling and peer connection lifecycle",
+        "Synchronizing real-time presence updates across clients",
+        "Handling socket reconnections and edge cases",
+        "Securing authentication flow across REST and WebSocket layers",
+      ],
+
+      impact: [
+        "Demonstrates real-time system architecture knowledge",
+        "Shows understanding of WebRTC signaling and socket-based communication",
+        "Showcases full-stack ownership from database to deployment",
+      ],
+    },
+
+    {
+      gitClient: "https://github.com/faridulhaque/Taskflow-FE",
+      gitServer: "https://github.com/faridulhaque/Taskflow-BE",
+      videoDemo: "https://www.loom.com/share/2cf921599b7c4f37af09c2c34bbfd582",
+      live: "https://taskflow-fe-five.vercel.app/",
+      title: "Task Flow",
+      description:
+        "A full-stack task management application featuring secure authentication, CRUD operations, and email-based password recovery.",
+      imgUrl: "/assets/project/todo.webp",
+      tag: ["Next.js", "Express.js", "MongoDB", "JWT", "Firebase", "Tailwind"],
+
+      role: "Full-Stack Developer (Solo Project)",
+
+      status: "Live",
+
+      overview:
+        "A complete task management system built from scratch to demonstrate authentication flows, protected APIs, and scalable backend architecture.",
+
+      responsibilities: [
+        "Designed MongoDB schema and structured backend architecture",
+        "Built RESTful APIs using Express.js",
+        "Implemented JWT-based authentication system",
+        "Integrated Firebase for Google OAuth login",
+        "Developed password reset flow using Mailjet",
+        "Built responsive frontend using Next.js and Tailwind CSS",
+        "Connected frontend with protected backend APIs",
+        "Deployed backend on Railway (migrating to Render) and frontend on Vercel",
+      ],
+
+      challenges: [
+        "Handling secure authentication flow across JWT and Firebase",
+        "Managing email reset token validation and expiration",
+        "Coordinating frontend-backend communication securely",
+      ],
+
+      impact: [
+        "Demonstrates complete authentication lifecycle implementation",
+        "Shows ability to architect and deploy full-stack applications independently",
+      ],
+    },
+    {
+      gitClient: "https://github.com/faridulhaque/The-Coffee",
+      gitServer: "",
+      videoDemo: "",
+      live: "https://the-coffee-three.vercel.app/",
+      title: "The Coffee",
+      description:
+        "A responsive coffee shop showcase website built with Next.js and raw CSS, focusing on UI structure and smooth scroll animations.",
+      imgUrl: "/assets/project/coffee.webp",
+      tag: ["Next.js", "TypeScript", "CSS", "AOS"],
+
+      role: "Frontend Developer",
+
+      status: "Personal project (Live)",
+
+      overview:
+        "A simple, elegant multi-language showcase site inspired by modern coffee shop designs, built to practice UI structuring and animation implementation.",
+
+      responsibilities: [
+        "Built fully responsive layout using raw CSS (no UI frameworks)",
+        "Implemented hardcoded multi-language toggle system",
+        "Integrated AOS for smooth scroll-based animations",
+        "Structured reusable React components",
+        "Organized clean folder architecture",
+      ],
+
+      challenges: [
+        "Managing layout responsiveness without utility frameworks",
+        "Handling language toggle state manually",
+      ],
+
+      impact: [
+        "Strengthened frontend fundamentals (layout, CSS structuring)",
+        "Improved understanding of component reusability",
+      ],
     },
   ];
 
