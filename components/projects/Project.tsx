@@ -88,7 +88,7 @@ export default function Project({ d }: { d: TProject }) {
       <div className="mt-auto">
         <button
           onClick={() => setIsModalOpen(true)}
-          className="cursor-pointer inline-flex items-center justify-center gap-2 btn btn-white px-4 shadow-md border border-black/70 rounded-4xl py-1 text-sm mt-5 w-fit hover:bg-black hover:text-white transition-colors duration-300"
+          className="cursor-pointer inline-flex items-center justify-center gap-2 btn btn-white px-4 shadow-md border border-black/70 rounded-4xl py-1 text-sm mt-5 w-fit"
         >
           View Case Study
           <svg
