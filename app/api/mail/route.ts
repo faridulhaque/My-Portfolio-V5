@@ -22,7 +22,7 @@ export async function POST(request: Request) {
       Messages: [
         {
           From: { Email: body.email, Name: body.name },
-          To: [{ Email: "faridmurshed9@gmail.com", Name: "Farid Murshed" }],
+          To: [{ Email: "official@faridmurshed.dev", Name: "Farid Murshed" }],
           Subject: "I visited your portfolio",
           TextPart: `${body.message}`,
         },
