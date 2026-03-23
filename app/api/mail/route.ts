@@ -23,7 +23,7 @@ export async function POST(request: Request) {
     body: JSON.stringify({
       Messages: [
         {
-          From: { Email: "test@faridmurshed.dev", Name: body.name },
+          From: { Email: "portfolio@faridmurshed.dev", Name: body.name },
           To: [{ Email: "faridmurshed9@gmail.com", Name: "Farid Murshed" }],
           Subject: "I visited your portfolio",
           TextPart: `
