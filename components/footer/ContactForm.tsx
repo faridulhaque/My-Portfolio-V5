@@ -73,7 +73,7 @@ function ContactForm() {
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
           <div className="bg-white rounded-xl w-11/12 md:w-1/3 p-6 shadow-xl">
             <p className={`"text-black/70 mt-2"`}>
-              Thanks for sending message. I wil reach you soon.
+              Thanks for sending message. I will reach you soon.
             </p>
 
             <div className="flex justify-end gap-3 mt-6">
