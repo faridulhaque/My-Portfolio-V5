@@ -10,8 +10,6 @@ export async function POST(request: Request) {
   const publicKey = process.env.MAILJET_PUBLIC_KEY;
   const privateKey = process.env.MAILJET_PRIVATE_KEY;
 
-
-
   const auth = Buffer.from(`${publicKey}:${privateKey}`).toString("base64");
 
   const response = await fetch("https://api.mailjet.com/v3.1/send", {
@@ -26,11 +24,13 @@ export async function POST(request: Request) {
           From: { Email: "portfolio@faridmurshed.dev", Name: body.name },
           To: [{ Email: "faridmurshed9@gmail.com", Name: "Farid Murshed" }],
           Subject: "I visited your portfolio",
-          TextPart: `
-          Sender Email: ${body.email}
-          Sender Name: ${body.name}
-          Message: ${body.message}
-          `,
+          TextPart: `Sender Email: ${body.email}\nMessage: ${body.message}`,
+          HTMLPart: `
+      <h3>New Message</h3>
+      <p><strong>Email:</strong> ${body.email}</p>
+      <p><strong>Name:</strong> ${body.name}</p>
+      <p><strong>Message:</strong><br/>${body.message}</p>
+    `,
         },
       ],
     }),
